@@ -1,0 +1,2 @@
+# GSWXY_AZauto
+Windows下一键编译Azerothcore源码
