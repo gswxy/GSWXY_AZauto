@@ -13,9 +13,11 @@ Windows下一键编译Azerothcore源码
 ## 准备
 ### 更改 PowerShell 执行策略
 以管理员身份打开PowerShell 输入：
+
 ```
 Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted  #执行后输入A
 ```
+
 ### 更改 PowerShell 中文显示
 打开系统设置——时间和语言-区域-其他日期、时间和区域设置——区域——管理——更改系统区域设置，勾选“Beat版：……”，确定后重启电脑即可。
 ## 运行脚本
@@ -23,10 +25,12 @@ Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted  #执行后
 点击此处下载脚本，放在任何非中文路径下，本文演示的是放在D盘。
 ### 打开脚本
 管理员方式打开PowerShell（本文若非特殊说明，均为以管理员方式打开），依次输入：
+
 ```
 D:
 ./GSWXY_AZauto.ps1
 ```
+
 ### 运行说明
 1. 依次提示你是否修改系统Hosts（每日自动更新最新Hosts）和DNS地址（阿里云），如果你不能访问[Github](https://github.com/)，请务必修改；
 2. 依次提示你是否修改源码下载、编译和、服务端路径，以及MYSQL的root密码，如不需要修改，直接回车即可；
@@ -37,8 +41,10 @@ D:
 7. 脚本自动生成MYSQL，自动导入和配置数据库（包括MOD需要导入的MYSQL文件）；
 8. 创建启动脚本。
 至此服务端搭建完毕。不过虽然有这个一键编译脚本，但还是建议大家多学下手动编译，了解下原理。如果有任何问题，欢迎来QQ群（938973736）讨论交流！
-科普一下，在你每次启动服务端时候，都会自动更新你的数据库，另外如果启动服务端时候出现以下提示
+科普一下，在你每次启动服务端时候，都会自动更新你的数据库，另外如果启动服务端时候出现以下提示：
+
 ```
 mysql: [Warning] Using a password on the command line interface can be insecure.
 ```
+
 不必担心，原因是服务端在更新数据库时候，以命令行的方式传输密码是不安全的，所以给你以上提示，不用管就行了。
